@@ -1,4 +1,4 @@
-package TASK_PERTEMUAN_7;
+package Pertemuan_7;
 
 public class Konsol {
     private final String jenis;

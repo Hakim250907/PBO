@@ -1,4 +1,4 @@
-package individu;
+package individu_Quiz;
 import java.util.Scanner;
 
 public class Mainmahasiswa {

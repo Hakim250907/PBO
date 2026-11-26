@@ -1,10 +1,10 @@
-package TASK_PERTEMUAN_7;
+package Pertemuan_6;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class Memory_Management {
+public class ijinkompeps {
     static Scanner input = new Scanner(System.in);
 
     static int hitungDiskon(int durasi) {

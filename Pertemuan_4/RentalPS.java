@@ -1,4 +1,4 @@
-package TASK_PERTEMUAN_4;
+package Pertemuan_4;
 import java.util.Scanner;
 
 // SISTEM PENYEWAAN PS4 / PS5

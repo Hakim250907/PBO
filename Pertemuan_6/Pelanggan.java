@@ -1,4 +1,4 @@
-package TASK_PERTEMUAN_6;
+package Pertemuan_6;
 
 public class Pelanggan {
     private String nama;

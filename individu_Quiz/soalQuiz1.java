@@ -1,4 +1,4 @@
-package individu;
+package individu_Quiz;
 class buku {
     String judul;
     String penulis;

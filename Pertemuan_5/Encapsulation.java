@@ -1,4 +1,4 @@
-package TASK_PERTEMUAN_5;
+package Pertemuan_5;
 
 import java.util.Scanner;
 

@@ -1,7 +1,8 @@
 package project_PS;
 
+// SUPERCLASS (kelas induk): berisi atribut dan method yang umum untuk semua konsol.
 public class Konsol {
-    private final String jenis;
+    protected final String jenis;   // protected: bisa diakses oleh subclass (PS4 & PS5)
     private final int hargaSewa;
     private int stok;
 
@@ -27,5 +28,15 @@ public class Konsol {
         if (stok > 0) {
             stok--;
         }
+    }
+
+    // Method ini akan di-OVERRIDE (ditimpa) oleh subclass
+    public String getFasilitas() {
+        return "Konsol standar";
+    }
+
+    // Method turunan: otomatis dimiliki oleh PS4 dan PS5 tanpa ditulis ulang (reuse kode)
+    public String getInfo() {
+        return jenis + " - Rp" + hargaSewa + "/jam (Stok: " + stok + ")";
     }
 }

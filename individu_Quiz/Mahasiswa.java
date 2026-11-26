@@ -1,4 +1,4 @@
-package individu;
+package individu_Quiz;
 public class Mahasiswa {
     private String nim;
     private String nama;

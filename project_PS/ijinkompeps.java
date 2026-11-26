@@ -1,5 +1,4 @@
 package project_PS;
-
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -39,8 +38,9 @@ public class ijinkompeps {
         int stokps5 = input.nextInt();
         input.nextLine();
 
-        Konsol ps4 = new Konsol("PS4", 5000, stokps4);
-        Konsol ps5 = new Konsol("PS5", 10000, stokps5);
+        // Inheritance: objek dibuat dari SUBCLASS (PS4/PS5), disimpan di variabel bertipe SUPERCLASS (Konsol)
+        Konsol ps4 = new PS4(stokps4);
+        Konsol ps5 = new PS5(stokps5);
 
         System.out.print("Nama pelanggan: ");
         String nama = input.nextLine();
@@ -50,8 +50,9 @@ public class ijinkompeps {
 
         Pelanggan pelanggan = new Pelanggan(nama, noHp);
 
-        System.out.println("\n1. PS4 - Rp5000/jam (Stok: " + ps4.getStok() + ")");
-        System.out.println("2. PS5 - Rp10000/jam (Stok: " + ps5.getStok() + ")");
+        // getInfo() dipakai dari superclass Konsol oleh PS4 dan PS5
+        System.out.println("\n1. " + ps4.getInfo());
+        System.out.println("2. " + ps5.getInfo());
 
         System.out.print("Pilih konsol: ");
         int pilihan = input.nextInt();
@@ -83,7 +84,7 @@ public class ijinkompeps {
         LocalTime mulai = LocalTime.of(jamMulai, 0);
         LocalTime selesai = mulai.plusHours(durasi);
 
-        if (selesai.isAfter(LocalTime.of(22, 0))) {
+        if (jamMulai + durasi > 22) {
             System.out.println("Penyewaan melewati jam tutup!");
             System.out.println("Rental hanya buka pukul 10.00-22.00.");
             input.close();
@@ -103,6 +104,7 @@ public class ijinkompeps {
         System.out.println("Nama        : " + pelanggan.getNama());
         System.out.println("No. HP      : " + pelanggan.getNoHp());
         System.out.println("Konsol      : " + konsol.getJenis());
+        System.out.println("Fasilitas   : " + konsol.getFasilitas()); // method hasil override di PS4/PS5
         System.out.println("Durasi      : " + durasi + " jam");
         System.out.println("Mulai       : " + mulai.format(format));
         System.out.println("Waktu habis : " + selesai.format(format));
