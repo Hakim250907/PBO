@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Mainmahasiswa {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try( Scanner input = new Scanner(System.in)) {
 
         System.out.print("NIM         : ");
         String nim = input.nextLine();
@@ -20,5 +20,6 @@ public class Mainmahasiswa {
 
         System.out.println();
         mhs.tampilkanData();
+        }
     }
 }
